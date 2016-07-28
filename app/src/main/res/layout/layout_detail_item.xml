@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detail_item_img_margin"
+        android:layout_marginLeft="@dimen/detail_item_img_margin"
+        android:layout_marginRight="@dimen/detail_item_img_margin"
+        android:text="Apple iPhone 6 Plus Cover Case"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detail_item_vert_margin_small"
+        android:layout_marginLeft="@dimen/detail_item_img_margin"
+        android:layout_marginRight="@dimen/detail_item_img_margin"
+        android:text="Unknown location"
+        android:textSize="@dimen/detail_item_text_size_small"/>
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detail_item_vert_margin_small"
+        android:layout_marginLeft="@dimen/detail_item_img_margin"
+        android:layout_marginRight="@dimen/detail_item_img_margin"
+        android:text="45KM Away from You    March 15 2015"
+        android:textSize="@dimen/detail_item_text_size_small"/>
+
+    <TextView
+        android:id="@+id/text_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detail_item_vert_margin"
+        android:layout_marginLeft="@dimen/detail_item_img_margin"
+        android:layout_marginRight="@dimen/detail_item_img_margin"
+        android:text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:layout_marginTop="@dimen/detail_item_vert_margin"
+        android:background="@color/color_light_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_item_button_height"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+            
+            <ImageView
+                android:layout_width="@dimen/detail_item_button_height"
+                android:layout_height="match_parent"
+                android:padding="@dimen/detail_item_img_margin"
+                android:src="@mipmap/detail_share"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share     "/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_height"
+            android:layout_height="match_parent"
+            android:background="@color/color_gray"
+            android:layout_marginTop="@dimen/detail_item_img_margin"
+            android:layout_marginBottom="@dimen/detail_item_img_margin"/>
+
+        <LinearLayout
+            android:id="@+id/layout_favourite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgview_favourite"
+                android:layout_width="@dimen/detail_item_button_height"
+                android:layout_height="match_parent"
+                android:padding="@dimen/detail_item_img_margin"
+                android:src="@mipmap/detail_favourite"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite    "/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_height"
+            android:layout_height="match_parent"
+            android:background="@color/color_gray"
+            android:layout_marginTop="@dimen/detail_item_img_margin"
+            android:layout_marginBottom="@dimen/detail_item_img_margin"/>
+
+        <LinearLayout
+            android:id="@+id/layout_report"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/detail_item_button_height"
+                android:layout_height="match_parent"
+                android:padding="@dimen/detail_item_img_margin"
+                android:src="@mipmap/detail_report"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report     "/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_light_gray"/>
+
+</LinearLayout>

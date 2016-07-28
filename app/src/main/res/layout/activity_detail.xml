@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- navigation bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_bar_height"
+            android:background="@color/color_theme">
+
+            <Button
+                android:id="@+id/but_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nav_back"
+                android:textAllCaps="false"
+                android:textSize="@dimen/nav_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@null"
+                android:drawableLeft="@mipmap/nav_back_icon"
+                android:paddingLeft="@dimen/nav_back_padding"
+                android:paddingRight="@dimen/nav_back_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Item"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/nav_title_font_size" />
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_but_height"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/but_want"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/add_but_margin"
+                android:text="I WANT THIS"
+                android:textSize="@dimen/signin_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@drawable/theme_but_bg"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_trans_theme"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/detail_contact_top_margin"
+            android:layout_marginLeft="@dimen/detail_item_img_margin"
+            android:layout_marginRight="@dimen/detail_item_img_margin"
+            android:paddingTop="@dimen/detail_contact_top_margin"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Lynda Jones"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/detail_item_vert_margin"
+                android:text="Contact Details"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_light_gray"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_contact_info_height"
+                android:orientation="vertical"
+                android:padding="@dimen/detail_contact_hori_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Phone: "
+                        android:gravity="center"/>
+
+                    <Button
+                        android:id="@+id/but_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+1 800 562 8562"
+                        android:background="@null"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email: "
+                        android:gravity="center"/>
+
+                    <Button
+                        android:id="@+id/but_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="george@moxeve.com"
+                        android:textAllCaps="false"
+                        android:background="@null"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/detail_contact_user_size"
+            android:layout_height="@dimen/detail_contact_user_size"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/profile_photo_bg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgview_user"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/user_default"
+                android:padding="7dp"
+                app:riv_border_width="0dp"
+                app:riv_oval="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_mention"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@mipmap/mention_frame_up"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/list_mention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+        </ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

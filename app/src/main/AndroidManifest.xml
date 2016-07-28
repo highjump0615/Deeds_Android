@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.iliayugai.deeds" >
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:protectionLevel="signature"
+        android:name="com.iliayugai.deeds.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.iliayugai.deeds.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".AppDeeds"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1566268786958154"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".LandingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".SigninActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ForgetActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".FavouriteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".AddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".NotifyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".DetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".FollowingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".ReviewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".RateActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name=".FullImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!--
+            push notification
+        -->
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParseBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.iliayugai.deeds" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="com.parse.push.intent.DELETE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+
+</manifest>

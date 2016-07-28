@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <!-- navigation bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:background="@mipmap/nav_bg">
+
+        <Button
+            android:id="@+id/but_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/nav_back"
+            android:textAllCaps="false"
+            android:textSize="@dimen/nav_but_font_size"
+            android:textColor="@android:color/white"
+            android:background="@null"
+            android:drawableLeft="@mipmap/nav_back_icon"
+            android:paddingLeft="@dimen/nav_back_padding"
+            android:paddingRight="@dimen/nav_back_padding"/>
+
+        <ImageView
+            android:layout_width="@dimen/nav_logo_size"
+            android:layout_height="@dimen/nav_logo_size"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/logo" />
+
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forget_text_height"
+        android:text="Reset password to your email"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/signin_hori_margin"
+        android:background="@color/text_gray_bg"/>
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Email"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="textEmailAddress"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/but_reset"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/signin_but_height"
+            android:layout_marginLeft="@dimen/signin_hori_margin"
+            android:layout_marginRight="@dimen/signin_hori_margin"
+            android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+            android:layout_above="@+id/but_signup"
+            android:text="RESET PASSWORD"
+            android:textSize="@dimen/signin_but_font_size"
+            android:background="@drawable/signin_but_bg"/>
+
+        <Button
+            android:id="@+id/but_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/signin_edit_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+            android:text="@string/not_on_deed"
+            android:textAllCaps="false"
+            android:background="@null"
+            android:textColor="@color/color_theme"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

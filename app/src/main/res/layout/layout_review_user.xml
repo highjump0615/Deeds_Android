@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/review_user_top_margin"
+        android:paddingTop="@dimen/review_user_top_margin"
+        android:paddingBottom="@dimen/review_user_top_padding"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/text_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lynda Jones"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/but_review_num"
+                android:layout_width="@dimen/profile_rate_num_but_size"
+                android:layout_height="@dimen/profile_rate_num_but_size"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/color_yellow"
+                android:background="@drawable/profile_rate_num_but_bg"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Memeber Since: 2012  Location: 19520 NY USA"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/review_user_photo_size"
+        android:layout_height="@dimen/review_user_photo_size"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/profile_photo_bg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgview_photo"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/user_default"
+            android:padding="8dp"
+            app:riv_border_width="0dp"
+            app:riv_oval="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

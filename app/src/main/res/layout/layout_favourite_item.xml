@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/favourite_item_height">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Bottom View Start -->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_red">
+
+            <Button
+                android:id="@+id/but_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="DELETE"
+                android:textColor="@android:color/white"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/imgview_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/profile_edit_but"
+                android:padding="20dp"
+                android:background="@color/color_yellow"/>
+
+        </RelativeLayout>
+        <!-- Bottom View End -->
+
+        <!-- Surface View Start -->
+        <LinearLayout
+            android:id="@+id/layout_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/list_item_bg">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+
+                <ImageView
+                    android:id="@+id/imgview_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/home_item_default"
+                    android:scaleType="centerCrop"
+                    android:background="@color/color_img_bg"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_trans_theme">
+
+                    <ImageView
+                        android:layout_width="@dimen/favourite_item_done_size"
+                        android:layout_height="@dimen/favourite_item_done_size"
+                        android:src="@mipmap/item_done_icon"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apple iPhone 6 Plush Cover Case"
+                    android:lines="1"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/home_item_title_font_size"
+                    android:layout_marginLeft="@dimen/home_item_hori_margin"
+                    android:layout_marginRight="@dimen/home_item_hori_margin"
+                    android:layout_marginTop="@dimen/home_item_hori_margin"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/home_item_hori_margin"
+                    android:layout_marginRight="@dimen/home_item_hori_margin"
+                    android:layout_marginTop="@dimen/home_item_hori_margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="45KM Away"
+                        android:textSize="@dimen/home_item_desc_font_size"/>
+
+                    <View
+                        android:layout_width="@dimen/home_item_dot_size"
+                        android:layout_height="@dimen/home_item_dot_size"
+                        android:background="@drawable/signup_photo_bg"
+                        android:layout_marginLeft="@dimen/home_item_dot_margin"
+                        android:layout_marginRight="@dimen/home_item_dot_margin"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/text_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="March 15 2015"
+                        android:textSize="@dimen/home_item_desc_font_size"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/home_item_hori_margin"
+                    android:layout_marginTop="@dimen/home_item_hori_margin_small">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgview_photo"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="@dimen/home_item_photo_size"
+                        android:layout_height="@dimen/home_item_photo_size"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/user_default"
+                        app:riv_border_width="0dp"
+                        app:riv_oval="true"/>
+
+                    <Button
+                        android:id="@+id/but_user"
+                        android:layout_toRightOf="@+id/imgview_photo"
+                        android:layout_toLeftOf="@+id/imgview_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/home_item_hori_margin_small"
+                        android:layout_marginRight="@dimen/home_item_hori_margin_small"
+                        android:text="Lynda Jones"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/home_item_desc_font_size"
+                        android:gravity="left|center_vertical"
+                        android:background="@null"/>
+
+                    <ImageView
+                        android:id="@+id/imgview_type"
+                        android:layout_width="@dimen/home_item_type_img_width"
+                        android:layout_height="@dimen/home_item_type_img_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@mipmap/deed_tag"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Surface View End -->
+
+    </com.daimajia.swipe.SwipeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_light_gray"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

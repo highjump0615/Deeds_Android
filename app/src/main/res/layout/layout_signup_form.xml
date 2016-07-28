@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forget_text_height"
+        android:text="Please fill out to sign up"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/signin_hori_margin"
+        android:background="@color/text_gray_bg"/>
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Enter your email"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/edit_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="First Name"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edit_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Last Name"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Phone Number (Optional)"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/edit_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Location (Optional)"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="textPostalAddress"/>
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Password"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/edit_cpassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_edit_height"
+        android:layout_marginTop="@dimen/signin_edit_margin"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:hint="Repeat Password"
+        android:textColorHint="@color/color_edit_hint"
+        android:inputType="textPassword"/>
+    
+    <LinearLayout
+        android:id="@+id/layout_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/signin_hori_margin"
+        android:layout_marginRight="@dimen/signin_hori_margin"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/signin_hori_margin"
+            android:text="I Agree to "/>
+
+        <Button
+            android:id="@+id/but_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+            android:text="Terms and Conditions"
+            android:textAllCaps="false"
+            android:background="@null"
+            android:textColor="@color/color_theme"/>
+
+    </LinearLayout>
+
+</LinearLayout>

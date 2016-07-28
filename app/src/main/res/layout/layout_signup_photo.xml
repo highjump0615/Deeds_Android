@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/signup_top_margin"
+            android:background="@color/text_gray_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/forget_text_height"
+                android:layout_marginLeft="@dimen/signup_but_margin"
+                android:layout_marginRight="@dimen/signup_but_margin"
+                android:layout_marginBottom="25dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/landing_fb_but_bg"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_take_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Take New Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/signup_photo_but_font_size"
+                    android:drawableLeft="@mipmap/signup_take_photo"
+                    android:paddingLeft="@dimen/signup_photo_but_padding"
+                    android:paddingRight="@dimen/signup_photo_but_padding"
+                    android:background="@null"/>
+
+                <View
+                    android:layout_width="@dimen/line_height"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_gray"
+                    android:layout_marginTop="@dimen/signup_photo_but_vert_margin"
+                    android:layout_marginBottom="@dimen/signup_photo_but_vert_margin"/>
+
+                <Button
+                    android:id="@+id/but_choose_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Choose Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/signup_photo_but_font_size"
+                    android:drawableLeft="@mipmap/signup_choose_photo"
+                    android:paddingLeft="@dimen/signup_photo_but_padding"
+                    android:paddingRight="@dimen/signup_photo_but_padding"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/signup_photo_size"
+            android:layout_height="@dimen/signup_photo_size"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/signup_photo_bg">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/imgview_photo"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/user_default"
+                android:padding="10dp"
+                app:riv_border_width="0dp"
+                app:riv_oval="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/edit_about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/signup_but_margin"
+            android:layout_marginLeft="@dimen/signup_but_margin"
+            android:layout_marginRight="@dimen/signup_but_margin"
+            android:layout_marginBottom="110dp"
+            android:hint="Tell us something about you..."
+            android:gravity="left"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

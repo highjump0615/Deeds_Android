@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/landing_bg">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.95"
+        android:background="@color/color_theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/profile_bg"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- navigation bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_bar_height">
+
+            <Button
+                android:id="@+id/but_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nav_back"
+                android:textAllCaps="false"
+                android:textSize="@dimen/nav_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@null"
+                android:drawableLeft="@mipmap/nav_back_icon"
+                android:paddingLeft="@dimen/nav_back_padding"
+                android:paddingRight="@dimen/nav_back_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Write Review"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/nav_title_font_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/signup_top_margin"
+                android:paddingTop="@dimen/signup_top_margin"
+                android:paddingBottom="@dimen/review_user_top_padding"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/text_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lynda Jones"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <Button
+                        android:id="@+id/but_review_num"
+                        android:layout_width="@dimen/profile_rate_num_but_size"
+                        android:layout_height="@dimen/profile_rate_num_but_size"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="0"
+                        android:textColor="@color/color_yellow"
+                        android:background="@drawable/profile_rate_num_but_bg"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Memeber Since: 2012  Location: 19520 NY USA"
+                    android:gravity="center"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/signup_photo_size"
+                android:layout_height="@dimen/signup_photo_size"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/profile_photo_bg">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgview_photo"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/user_default"
+                    android:padding="10dp"
+                    app:riv_border_width="0dp"
+                    app:riv_oval="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rate_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_exp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Experience About Lynda Jones"
+                android:textSize="15sp"/>
+
+            <SeekBar
+                android:id="@+id/seekbar_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:max="2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Good"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Amazing"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_light_gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/rate_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Write Your Review"
+                android:textSize="17sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/rate_margin_small"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/detail_user_size_small"
+                    android:layout_height="@dimen/detail_user_size_small"
+                    android:background="@drawable/profile_photo_bg">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgview_user"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/user_default"
+                        android:padding="5dp"
+                        app:riv_border_width="0dp"
+                        app:riv_oval="true"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/edit_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/rate_margin_small"
+                    android:background="@mipmap/rate_comment_frame"
+                    android:hint="Leave a Comment ..."
+                    android:gravity="top"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="7dp"
+                    android:textSize="15sp"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/add_but_height"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/but_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/add_but_margin"
+                android:text="SUBMIT REVIEW"
+                android:textSize="@dimen/signin_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@drawable/theme_but_bg"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

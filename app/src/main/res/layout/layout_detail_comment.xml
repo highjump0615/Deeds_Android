@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Bottom View Start -->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_red">
+
+            <Button
+                android:id="@+id/but_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="DELETE"
+                android:textColor="@android:color/white"
+                android:background="@null"/>
+
+        </RelativeLayout>
+        <!-- Bottom View End -->
+
+        <!-- Surface View Start -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/detail_item_img_margin">
+
+            <RelativeLayout
+                android:layout_width="@dimen/detail_user_size_small"
+                android:layout_height="@dimen/detail_user_size_small"
+                android:background="@drawable/profile_photo_bg">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgview_user"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/user_default"
+                    android:padding="3dp"
+                    app:riv_border_width="0dp"
+                    app:riv_oval="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/detail_item_img_margin"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/but_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Chuck Norris"
+                    android:textAllCaps="false"
+                    android:gravity="left|center_vertical"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/text_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu"/>
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/detail_item_vert_margin_small"
+                    android:text="3 Hours Ago"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Surface View End -->
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</RelativeLayout>

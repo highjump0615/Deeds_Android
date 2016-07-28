@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_trans_grey">#7F000000</color>
+
+    <color name="color_theme">#509acd</color>
+    <color name="color_semi_theme">#5f509acd</color>
+    <color name="color_trans_theme">#b0509acd</color>
+
+    <color name="color_red">#f66968</color>
+    <color name="color_green">#49a17a</color>
+    <color name="color_yellow">#ffc30d</color>
+
+    <color name="color_gray">#7d8188</color>
+    <color name="color_light_gray">#bdc1c8</color>
+    <color name="color_img_bg">#dde1d8</color>
+
+    <!-- signin activity -->
+    <color name="color_edit_hint">#9ca2ab</color>
+    <color name="text_gray_bg">#dcdfe4</color>
+
+    <!-- add activity -->
+    <color name="add_topic_bg">#eceff4</color>
+
+    <color name="tab_bar_background">#f6f6f6</color>
+
+    <!-- profile activity -->
+    <color name="profile_bg">#eeeeee</color>
+
+</resources>

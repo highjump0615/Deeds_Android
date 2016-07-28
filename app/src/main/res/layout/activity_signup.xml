@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/landing_bg">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.95"
+        android:background="@color/color_theme" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- navigation bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_bar_height">
+
+            <Button
+                android:id="@+id/but_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nav_back"
+                android:textAllCaps="false"
+                android:textSize="@dimen/nav_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@null"
+                android:drawableLeft="@mipmap/nav_back_icon"
+                android:paddingLeft="@dimen/nav_back_padding"
+                android:paddingRight="@dimen/nav_back_padding"/>
+
+            <ImageView
+                android:layout_width="@dimen/nav_logo_size"
+                android:layout_height="@dimen/nav_logo_size"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/logo" />
+
+        </RelativeLayout>
+
+        <com.iliayugai.deeds.widget.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.iliayugai.deeds.widget.CustomViewPager>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/but_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/signup_but_margin"
+        android:layout_marginRight="@dimen/signup_but_margin"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/but_next"
+        android:layout_centerHorizontal="true"
+        android:text="Log out"
+        android:textAllCaps="false"
+        android:textColor="@color/color_theme"
+        android:textSize="@dimen/signin_but_font_size"
+        android:background="@null"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/but_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/signin_but_height"
+        android:layout_marginLeft="@dimen/signup_but_margin"
+        android:layout_marginRight="@dimen/signup_but_margin"
+        android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+        android:layout_above="@+id/indicator"
+        android:text="NEXT STEP"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/signin_but_font_size"
+        android:background="@drawable/theme_but_bg"/>
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/signin_but_bottom_margin"/>
+
+</RelativeLayout>

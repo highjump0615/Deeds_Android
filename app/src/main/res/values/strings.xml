@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Deeds</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- layout landing -->
+    <string name="landing_deed">The Deed app is where the real magic happens. We are joining the communities together with one good deed at a time. Join us and make this world a feel a little sweeter</string>
+    <string name="landing_kind">Be kind and help someone in need. Someone once said " one mans trash is another mans treasure" assist a person in need or just give them a helping hand because you are awesome</string>
+    <string name="landing_free">Browse the world or your community for some amazing people. You will be able to find items, skills and people that will help you with what you need for FREE! If you are in need ? You can ask for help at deedx</string>
+
+    <!-- nav bar -->
+    <string name="nav_back">Back</string>
+
+    <!-- signin activity -->
+    <string name="not_on_deed">Not on DeeD?</string>
+
+    <string name="facebook_app_id">1566268786958154</string>
+
+</resources>

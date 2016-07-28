@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="22.0.0"><source path="E:\Source\before\Deeds\Deeds\PhotoView\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\assets"/></dataSet><dataSet config="debug"><source path="E:\Source\before\Deeds\Deeds\PhotoView\build\intermediates\bundles\debug\assets"/></dataSet><dataSet config="main"><source path="E:\Source\before\Deeds\Deeds\PhotoView\src\androidTest\assets"/><source path="E:\Source\before\Deeds\Deeds\PhotoView\build\generated\assets\shaders\androidTest\debug"/></dataSet></merger>

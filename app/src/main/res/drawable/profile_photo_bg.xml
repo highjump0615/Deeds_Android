@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@android:color/white" />
+    <stroke android:color="@android:color/white" />
+    <corners
+        android:bottomRightRadius="@dimen/signup_top_margin"
+        android:bottomLeftRadius="@dimen/signup_top_margin"
+        android:topLeftRadius="@dimen/signup_top_margin"
+        android:topRightRadius="@dimen/signup_top_margin" />
+
+</shape>

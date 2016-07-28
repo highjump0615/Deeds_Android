@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/list_item_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/detail_item_img_margin">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgview_user"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/review_item_user_size"
+            android:layout_height="@dimen/review_item_user_size"
+            android:src="@mipmap/user_default"
+            app:riv_border_width="0dp"
+            app:riv_oval="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/detail_item_img_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/but_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Chuck Norris"
+                    android:textAllCaps="false"
+                    android:gravity="left|center_vertical"
+                    android:background="@null"/>
+
+                <ImageView
+                    android:id="@+id/imgview_icon"
+                    android:layout_width="@dimen/review_item_icon_size"
+                    android:layout_height="@dimen/review_item_icon_size"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/review_bad"/>
+
+                <TextView
+                    android:id="@+id/text_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Bad"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu"/>
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/detail_item_vert_margin_small"
+                android:text="3 Hours Ago"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_light_gray" />
+
+</LinearLayout>

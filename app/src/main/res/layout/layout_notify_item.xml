@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_notify_root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/notify_item_height"
+    android:background="@drawable/notify_item_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgview_icon"
+            android:layout_width="@dimen/notify_item_height"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@mipmap/notify_comment"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/text_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="You have got new comment"
+                android:textColor="@drawable/notify_item_desc_color"/>
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="March 15 2015, 10:40"
+                android:textSize="12sp"
+                android:textColor="@drawable/notify_item_time_color"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/notify_item_arrow_vert_padding"
+            android:paddingBottom="@dimen/notify_item_arrow_vert_padding"
+            android:paddingLeft="@dimen/notify_item_arrow_hori_padding"
+            android:paddingRight="@dimen/notify_item_arrow_hori_padding"
+            android:src="@mipmap/notify_arrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_light_gray"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

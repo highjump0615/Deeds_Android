@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/landing_bg">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.95"
+        android:background="@color/color_theme" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@color/profile_bg"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- navigation bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_bar_height">
+
+            <Button
+                android:id="@+id/but_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/nav_back"
+                android:textAllCaps="false"
+                android:textSize="@dimen/nav_but_font_size"
+                android:textColor="@android:color/white"
+                android:background="@null"
+                android:drawableLeft="@mipmap/nav_back_icon"
+                android:paddingLeft="@dimen/nav_back_padding"
+                android:paddingRight="@dimen/nav_back_padding"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="Reviews"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/nav_title_font_size" />
+
+            <ImageView
+                android:id="@+id/imgview_rate"
+                android:layout_width="@dimen/nav_bar_height"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/profile_review_but"
+                android:paddingLeft="@dimen/nav_menu_right_but_padding"
+                android:paddingRight="@dimen/nav_menu_right_but_padding"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

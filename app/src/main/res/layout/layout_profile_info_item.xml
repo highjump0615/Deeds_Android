@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="@dimen/signup_top_margin"
+        android:background="@android:color/white">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_marginTop="@dimen/signup_top_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/signup_photo_size"
+        android:layout_height="@dimen/signup_photo_size"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/profile_photo_bg">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgview_photo"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/user_default"
+            android:padding="10dp"
+            app:riv_border_width="0dp"
+            app:riv_oval="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/profile_bg">
+
+        <Button
+            android:id="@+id/but_follow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_follow_but_height"
+            android:layout_marginTop="@dimen/profile_follow_margin"
+            android:layout_marginLeft="@dimen/profile_follow_margin"
+            android:layout_marginRight="@dimen/profile_follow_margin"
+            android:text="UNFOLLOW"
+            android:textColor="@color/color_red"
+            android:textSize="@dimen/signin_but_font_size"
+            android:background="@drawable/landing_fb_but_bg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_follow_following_height"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/but_following"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/profile_follow_following_padding"
+                android:text="0 Following"
+                android:textSize="@dimen/profile_follow_following_Text_size"
+                android:textAllCaps="false"
+                android:textColor="@color/color_gray"
+                android:gravity="right|center_vertical"
+                android:background="@null"/>
+
+            <Button
+                android:id="@+id/but_follower"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/profile_follow_following_padding"
+                android:text="0 Followers"
+                android:textSize="@dimen/profile_follow_following_Text_size"
+                android:textAllCaps="false"
+                android:textColor="@color/color_gray"
+                android:gravity="left|center_vertical"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lynda Jones"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"/>
+
+        <Button
+            android:id="@+id/but_review_num"
+            android:layout_width="@dimen/profile_rate_num_but_size"
+            android:layout_height="@dimen/profile_rate_num_but_size"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="0"
+            android:textColor="@color/color_yellow"
+            android:background="@drawable/profile_rate_num_but_bg"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Memeber Since: 2012  Location: 19520 NY USA"
+        android:gravity="center"/>
+
+</LinearLayout>

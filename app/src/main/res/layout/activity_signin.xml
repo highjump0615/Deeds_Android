@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <!-- navigation bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:background="@mipmap/nav_bg">
+
+        <Button
+            android:id="@+id/but_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/nav_back"
+            android:textAllCaps="false"
+            android:textSize="@dimen/nav_but_font_size"
+            android:textColor="@android:color/white"
+            android:background="@null"
+            android:drawableLeft="@mipmap/nav_back_icon"
+            android:paddingLeft="@dimen/nav_back_padding"
+            android:paddingRight="@dimen/nav_back_padding"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/nav_title_font_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/signin_logo_size"
+                    android:layout_height="@dimen/signin_logo_size"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/signin_logo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/signin_title_margin"
+                    android:text="Welcome to DeeD"
+                    android:textSize="@dimen/landing_title_font_size"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/signin_desc_margin"
+                    android:text="Thanks for installing - Let's get you setup!"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/signin_edit_height"
+                    android:layout_marginLeft="@dimen/signin_hori_margin"
+                    android:layout_marginRight="@dimen/signin_hori_margin"
+                    android:hint="Email"
+                    android:textColorHint="@color/color_edit_hint"
+                    android:inputType="textEmailAddress"/>
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/signin_edit_height"
+                    android:layout_marginLeft="@dimen/signin_hori_margin"
+                    android:layout_marginRight="@dimen/signin_hori_margin"
+                    android:layout_marginTop="@dimen/signin_edit_margin"
+                    android:hint="Password"
+                    android:textColorHint="@color/color_edit_hint"
+                    android:inputType="textPassword"/>
+
+                <Button
+                    android:id="@+id/but_forget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/signin_edit_height"
+                    android:text="Forgot Password?"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    android:textColor="@color/color_theme"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/signin_hori_margin"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/but_signin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/signin_but_height"
+                android:layout_marginLeft="@dimen/signin_hori_margin"
+                android:layout_marginRight="@dimen/signin_hori_margin"
+                android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+                android:layout_above="@+id/but_signup"
+                android:text="CONTINUE"
+                android:textSize="@dimen/signin_but_font_size"
+                android:background="@drawable/signin_but_bg"/>
+
+            <Button
+                android:id="@+id/but_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/signin_edit_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/signin_but_bottom_margin"
+                android:text="@string/not_on_deed"
+                android:textAllCaps="false"
+                android:background="@null"
+                android:textColor="@color/color_theme"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
